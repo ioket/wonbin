@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>~*~ Hoi Warga... ~*~</title>
+    <style>
+        body {
+            background-color: black;
+            color: #e9638b;
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.imgur.com/8KQZQ.png');
+            background-repeat: repeat;
+        }
+        
+        #container {
+            width: 800px;
+            margin: 0 auto;
+            border: 3px solid #e9638b;
+            background-color: black;
+            padding: 10px;
+        }
+        
+        #header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px dashed #e9638b;
+        }
+        
+        #header h1 {
+            font-size: 36px;
+            text-shadow: 2px 2px 0px #000;
+            margin: 5px 0;
+        }
+        
+        #header h2 {
+            font-size: 18px;
+            font-style: italic;
+            margin: 5px 0;
+        }
+        
+        #nav {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px dashed #e9638b;
+        }
+        
+        #nav a {
+            color: #e9638b;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        
+        #nav a:hover {
+            text-decoration: underline;
+        }
+        
+        #content {
+            display: flex;
+            padding: 20px 0;
+        }
+        
+        #main {
+            width: 70%;
+            padding-right: 20px;
+        }
+        
+        #sidebar {
+            width: 30%;
+            border-left: 2px dashed #e9638b;
+            padding-left: 20px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section h3 {
+            border-bottom: 1px solid #e9638b;
+            padding-bottom: 5px;
+        }
+        
+        #footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 2px dashed #e9638b;
+            font-size: 12px;
+        }
+        
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        
+        .profile-pic {
+            border: 3px solid #e9638b;
+            margin: 0 auto;
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .counter {
+            text-align: center;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        
+        .music-player {
+            background-color: #111;
+            padding: 10px;
+            border: 1px solid #e9638b;
+            margin-top: 10px;
+        }
+        
+        .warning {
+            color: #ff0000;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .mood-gif {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+        
+        .zodiac-pic {
+            width: 120px;
+            height: 120px;
+            margin-top: 10px;
+            border: 2px solid #e9638b;
+            border-radius: 50%;
+            animation: pulse 2s infinite, rotate 10s linear infinite;
+            object-fit: cover;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 5px #e9638b; }
+            50% { transform: scale(1.05); box-shadow: 0 0 20px #e9638b; }
+            100% { transform: scale(1); box-shadow: 0 0 5px #e9638b; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .sparkle {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .sparkle:after {
+            content: '✨';
+            position: absolute;
+            top: -10px;
+            right: -15px;
+            font-size: 20px;
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="https://i.pinimg.com/736x/f6/ae/3e/f6ae3e96aca34726ace74d80f997e310.jpg" alt="My Profile Pic" class="profile-pic">
+            <h1>~*~ Wonbin's <span class="sparkle">Profile</span> ~*~</h1>
+            <h2>admin admin apa yg kerja di belakang panggung ... maaruf <span class="blink">♥</span></h2>
+        </div>
+        
+        <div id="nav">
+            <a href="#about">About Me</a> | 
+            <a href="#interests">Interests</a> | 
+            <a href="#friends">Friends</a> | 
+            <a href="#blog">Blog</a> | 
+            <a href="#pics">Pictures</a>
+        </div>
+        
+        <div class="marquee">
+            <span>★・。・゜★・。・゜゜・。・゜☆゜・。・゜★・。・゜★ ~*~ Currently listening to: Hijau Daun - Suara (Ku Berharap) ~*~ ★・。・゜★・。・゜゜・。・゜☆゜・。・゜★・。・゜★</span>
+        </div>
+        
+        <div id="content">
+            <div id="main">
+                <div id="about" class="section">
+                    <h3>About Me</h3>
+                    <p>Hi I'm Wonbin dan jangan DM aku ya aku pemalu bgt sumpah...</p>
+                    <p>My mood today: <strong>In love w/ Eunseok...</strong> <img src="https://i.pinimg.com/originals/fc/bb/84/fcbb84b94b6c8c0126a374097e9bf6c4.gif" alt="in love" class="mood-gif heartbeat"></p>
+                </div>
+                
+                <div id="blog" class="section">
+                    <h3>Latest Blog Entry</h3>
+                    <h4>Welcoming Song Cukurukuk (Curut) to the family</h4>
+                    <p><small>Posted: 25/04/2002</small></p>
+                    <p>Her name is Curut... Welcoming Fatherhood with my partner :) I love you Eunseok...</p>
+                    <p><em>Current Song:</em> Nidji - Rahasia Hati</p>
+                </div>
+            </div>
+            
+            <div id="sidebar">
+                <div id="status" class="section">
+                    <h3>Status</h3>
+                    <p><strong>MARRIED</strong> <span class="blink">♥</span></p>
+                    <p><strong>Looking for:</strong> <span class="warning">EUNSEOK ONLY</span></p>
+                    <p><strong>Zodiac:</strong> Pisces</p>
+                    <img src="https://i.pinimg.com/736x/de/f0/3d/def03d17f094a39686724d89148fee52.jpg" alt="Eunseok" class="zodiac-pic">
+                </div>
+                
+                <div id="interests" class="section">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>Loket</li>
+                        <li>RIIZE</li>
+                        <li>Juyeon Ma BFF</li>
+                    </ul>
+                </div>
+                
+                <div id="music" class="section">
+                    <h3>Currently Listening To</h3>
+                    <div class="music-player">
+                        <p>Hijau Daun - Suara (Ku Berharap)</p>
+                        <p><em>Lyrics: Suara~ dengarkanlah aku~</em></p>
+                        <p>♫ ♫ ♫</p>
+                    </div>
+                </div>
+                
+                <div id="counter" class="counter">
+                    Visitor Count: 000001
+                </div>
+                
+                <div id="friends" class="section">
+                    <h3>Top Friends</h3>
+                    <ol>
+                        <li>EUNSEOK MY LOVE</li>
+                        <li>Juyeon</li>
+                        <li>Anton</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <p>~*~ This page was last updated: 25052002 ~*~</p>
+            <p>Best viewed with Internet Explorer 6.0 at 800x600 resolution</p>
+            <p>© 2002 - Won Bin Loket Profile - All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
